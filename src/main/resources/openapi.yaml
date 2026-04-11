@@ -1,0 +1,17 @@
+openapi: 3.0.1
+info:
+  title: Livranada API
+  version: 1.0.0
+
+paths:
+  /hello:
+    get:
+      summary: Retorna um hello world
+      operationId: getHello
+      responses:
+        '200':
+          description: sucesso
+          content:
+            application/json:
+              schema:
+                type: string
