@@ -4,6 +4,7 @@ import com.gustavodscruz.livranada.service.validations.annotations.CountryValidA
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDate;
 
@@ -16,7 +17,7 @@ import java.time.LocalDate;
 @Setter
 //validations
 @CountryValidAge
-public class User {
+public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
@@ -48,7 +49,7 @@ public class User {
     private Long starsReview;
 
     @Column(name = "is_author")
-    private boolean isAuthor;
+    private boolean author;
 
     @Column(length = 2)
     @Pattern(regexp = "^[A-Z]{2}$", message = "Country must be an ISO 3166-1 alpha-2 code (2 uppercase letters).")

@@ -7,6 +7,7 @@ import com.gustavodscruz.livranada.model.mappers.UserMapper;
 import com.gustavodscruz.livranada.repository.UserRepository;
 import jakarta.validation.Validator;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 import static com.gustavodscruz.livranada.utils.SecurityUtils.hashString;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserService {
 
     private final UserRepository userRepository;

@@ -16,7 +16,7 @@ public class Post {
     private Long id;
 
     @Column(name = "is_comment")
-    private boolean isComment;
+    private boolean comment;
 
     private String title;
 
